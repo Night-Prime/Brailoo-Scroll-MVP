@@ -10,6 +10,16 @@
     ---border-size-light: 1px solid var(--fashion-1-hex);
     --border-radius: 25px;
 
+    /* font sizes */
+    --h1: 89.76px;
+    --h2: 67.34px;
+    --h3: 50.52px;
+    --h4: 37.9px;
+    --h5: 28.43px;
+    --h6: 21.33px;
+    --p: 16px;
+    --small: 12px;
+
     --mobile-h1: 10vw;
     --mobile-h3: 4vw;
     --mobile-p: 2.5vw;
@@ -47,18 +57,19 @@ section {
 }
 
 .hero h1 {
-    font-size: 4.75vw;
+    font-size: var(--h2);
     font-weight: 500;
     /* letter-spacing: 2px; */
     margin-block: 1vw;
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: var(--h2);
 }
 
-.hero h3 {
-    font-size: 1rem;
+.hero p {
+    font-size: var(--p);
+    font-weight: 500;
 }
 
 .navbar {
@@ -87,7 +98,7 @@ main {
 a {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: var(--small);
     text-align: center;
     color: var(--fashion-4-hex);
     background-color: transparent;
@@ -109,6 +120,13 @@ a:hover {
     /* Change text color on hover */
 }
 
+.links {
+    /* inline-size: 600px; */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 
 .grid-inner span {
     display: flex;
@@ -120,15 +138,17 @@ a:hover {
     /* margin-block-start: 5%; */
     width: 100%;
     height: 100%;
+    padding-block: 5%;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: flex-end;
+    overflow: hidden;
 }
 
 .grid-content {
     width: 85%;
-    height: 90%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     color: var(--fashion-4-hex);
@@ -138,9 +158,9 @@ a:hover {
     visibility: hidden;
     opacity: 0;
 
-    padding-block: 1rem;
+    /* padding-block: 1rem; */
     position: relative;
-    height: 26vw;
+    height: (99vh / 3);
 }
 
 .first {
@@ -167,7 +187,7 @@ a:hover {
     position: absolute;
     /* top: 60%; */
     bottom: 0%;
-    left: 5vw;
+    right: -25%;
     top: 5%;
     block-size: 105% !important;
     padding: 5%;
@@ -179,7 +199,7 @@ a:hover {
 }
 
 .grid-text {
-    font-size: 1.25vw;
+    font-size: var(--h5);
     font-weight: 300;
     margin: 0;
     margin-block: 1vw;
@@ -189,6 +209,7 @@ a:hover {
 
 .third {
     grid-column: span 2;
+    block-size: 50vh;
     display: flex;
     align-items: center;
     padding: 0 !important;
@@ -203,6 +224,7 @@ a:hover {
 
 .file-top {
     flex: 1;
+    font-size: var(--small);
 }
 
 .file-top .icon {
@@ -225,26 +247,27 @@ a:hover {
 }
 
 .file-inner {
-    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    block-size: 100%;
+    inline-size: 100%;
     padding-inline: 5%;
-    padding-block-start: 7%;
 }
 
 .file-inner h4 {
     margin: 0;
-    font-size: 1.5vw;
+    font-size: var(--h5);
     font-weight: 600;
 }
 
 .file-inner p {
-    font-weight: 400;
+    font-size: var(--small);
+    font-weight: 500;
 }
 
 .icons {
-    font-size: 2.5vw;
+    font-size: var(--h4);
 }
 
 .community {
@@ -301,6 +324,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-end !important;
+    font-size: var(--fashion-1-hex);
 }
 
 
@@ -316,9 +340,11 @@ a:hover {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
+    color: var(--fashion-1-hex);
 }
 
 .grid-mission {
+    cursor: pointer;
     padding: 20px;
     inline-size: 100%;
     block-size: calc(100vh/2);
@@ -327,8 +353,10 @@ a:hover {
 }
 
 .grid-mission p {
+    font-size: var(--p);
     margin: 0;
-    color: var(--fashion-1-hex);
+    margin-bottom: var(--p);
+
 }
 
 .wide {
@@ -338,19 +366,22 @@ a:hover {
 .mission-inline .top,
 .last {
     padding: 0;
-    color: var(--fashion-1-hex);
-}
-
-.wide h6 {
-    font-size: 2vw;
-    inline-size: 12.5vw;
-    margin: 0;
-    padding: 2%;
-    color: var(--fashion-1-hex);
 }
 
 .wide h3 {
-    color: var(--fashion-1-hex);
+    font-size: var(--h2);
+    font-weight: 500;
+    inline-size: 80%;
+    margin: 0;
+    margin-bottom: var(--h6);
+}
+
+.wide p {
+    font-size: var(--p);
+    font-weight: 500;
+    inline-size: 80%;
+    text-align: justify;
+    margin-bottom: var(--p);
 }
 
 .top img,
@@ -437,7 +468,6 @@ a:hover {
 
 .text-reveal-inner {
     text-align: justify;
-    font-size: 1.25rem;
     position: absolute;
     width: 50%;
     bottom: 5%;
@@ -449,6 +479,7 @@ a:hover {
     opacity: 0;
     position: relative;
     display: block;
+    font-size: 16px;
 }
 
 .text-reveal-inner.animate-reveal span {
@@ -456,7 +487,7 @@ a:hover {
 }
 
 .team-inline .two {
-    height: calc(60%/2);
+    height: calc(100%);
     background-image: url(../assets/svg/eyes.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -464,16 +495,9 @@ a:hover {
     color: var(--fashion-4-hex);
 }
 
-.two h5,
-.three h5 {
+.two h5 {
     margin: 0;
     font-weight: 500;
-}
-
-.team-inline .three {
-    height: calc(60%/2);
-    background-color: var(--fashion-3-hex);
-    color: var(--fashion-4-hex);
 }
 
 /* Contact section */
@@ -579,6 +603,10 @@ a:hover {
     flex-direction: column;
 }
 
+/* .side-two {
+    padding-inline-end: 5%;
+} */
+
 .grid-event {
     block-size: 100%;
     inline-size: 100%;
@@ -595,6 +623,7 @@ a:hover {
     font-size: 2vw;
     margin: 0;
     font-weight: 500;
+    padding-inline-end: 5%;
 
 }
 
@@ -606,6 +635,7 @@ a:hover {
     bottom: 5%;
     right: 2%;
     font-weight: 600;
+    padding-inline-end: 5%;
 }
 
 .down {
@@ -647,7 +677,13 @@ a:hover {
     inline-size: 100%;
     block-size: 100%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer-inner h1 {
+    color: var(--fashion-4-hex);
+    text-align: center;
 }
 
 /* sliders */
@@ -694,10 +730,18 @@ a:hover {
 }
 
 .brand4 {
-    background-color: #fa4e3b
+    background-color: rgb(250, 151, 59)
 }
 
 .brand5 {
+    background-color: rgb(250, 142, 59)
+}
+
+.brand6 {
+    background-color: #ff8250
+}
+
+.brand7 {
     background-color: #FF6150
 }
 
