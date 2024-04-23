@@ -36,6 +36,7 @@ window.addEventListener("load", () => {
       pin: true,
       scrub: 1,
       end: `+=3500`,
+      preventOverlaps: false,
       // snap: 1 / (sections.length - 1),
     },
   });
@@ -96,20 +97,6 @@ window.addEventListener("load", () => {
     });
   }
 
-  // gsap.from(".event", {
-  //   x: 800,
-  //   duration: 5,
-  //   ease: "elastic.in",
-  //   scrollTrigger: {
-  //     containerAnimation: scrollTween,
-  //     trigger: ".contact",
-  //     start: "top 80%",
-  //     end: "+=1000",
-  //     scrub: true,
-  //     markers: true,
-  //   },
-  // });
-
   // sliders
   var actionLinks = document.querySelectorAll(".action");
   actionLinks.forEach(function (actionLink) {
@@ -140,6 +127,10 @@ window.addEventListener("load", () => {
   window.addEventListener("resize", function () {
     // onresize
     checkWidth();
+    console.log("triggered!");
+    if (this.screen.width <= 475) {
+      this.document.location = "mobile.html";
+    }
 
     // finish resize
     clearTimeout(window.resizedFinished);
