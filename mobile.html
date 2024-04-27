@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <title>Brailoo</title>
 </head>
 
@@ -13,7 +17,7 @@
     <section class="navbar">
         <nav>
             <header>
-                Brailoo
+                Brailoo.
             </header>
 
             <a href="">Waitlist <i class="fa fa-hourglass-half"></i></a>
@@ -46,33 +50,35 @@
     </section>
 
     <section class="info">
-        <div class="info-inner">
-            <div class="info-text bottom">
+        <div class="inner info-inner">
+            <div class="info-text bottom animate-in">
                 <h1>INSPIRE.</h1>
                 <h1>BRANDS.</h1>
             </div>
             <div class="info-text">
                 <div class="info-text-inner">
-                    <h1 class="cta">
+                    <h1 class="cta animate-in">
                         Our Values
                         <i class="fa fa-asterisk" aria-hidden="true"></i>
                     </h1>
-                    <p><b>Creativity,</b> we champion creativity as the lifeblood of our community, encouraging bold
+                    <p class="animate-in"><b>Creativity,</b> we champion creativity as the lifeblood of our community,
+                        encouraging bold
                         experimentation and visionary expression in
                         every garment and design.</p>
-                    <p> <b>Originality,</b> we celebrate the unique perspectives and cultural richness that each creator
+                    <p class="animate-in"> <b>Originality,</b> we celebrate the unique perspectives and cultural
+                        richness that each creator
                         brings to the
                         table, fostering an environment where authenticity reigns supreme.</p>
-                    <p>
+                    <p class="animate-in">
                         <b>Inclusivity,</b> We believe in the power of fashion to unite diverse voices, promoting
                         inclusivity and representation across all aspects of our community.
                     </p>
-                    <p>
+                    <p class="animate-in">
                         <b>Quality,</b> We uphold uncompromising standards of craftsmanship and excellence, ensuring
                         that every product featured on our platform reflects the highest levels of quality and
                         integrity.
                     </p>
-                    <p>
+                    <p class="animate-in">
                         <b>Empowerment, </b>Above all, we exist to empower fashion entrepreneurs, providing them
                         the resources, education, and support they need to succeed on their own terms and make a lasting
                         impact in the industry.
@@ -85,7 +91,7 @@
     <section class="offer">
         <div class="inner offer-inner">
             <div class="offer-card">
-                <div class="card-inner community">
+                <div class="card-inner community animate-in">
                     <h4>Community</h4>
                     <p>Join Our Vibrant Fashion Community: Connect, Collaborate, and Thrive with
                         Passionate Brands and Enthusiasts.
@@ -98,7 +104,7 @@
                 </div>
             </div>
             <div class="offer-card">
-                <div class="card-inner event">
+                <div class="card-inner event animate-in">
                     <h4>Workshops & Events</h4>
                     <p>Master the fashion industry with exclusive workshops & expert guidance.</p>
                     <span>
@@ -109,7 +115,7 @@
                 </div>
             </div>
             <div class="offer-card">
-                <div class="card-inner launchpad">
+                <div class="card-inner launchpad animate-in">
                     <h4>Launchpad</h4>
                     <p>Launch your fashion dreams with us.</p>
                     <span>
@@ -125,7 +131,7 @@
     <section class="mission">
         <div class="inner">
             <div class="mission-section">
-                <div class="mission-inline">
+                <div class="mission-inline animate-in">
                     <h4>Mission</h4>
                     <p>Brailoo is more than a marketplace; it's a movement. Our mission is to transform the
                         global fashion scene by providing a
@@ -138,7 +144,7 @@
                 </div>
             </div>
             <div class="vision-section">
-                <div class="vision-inline">
+                <div class="vision-inline animate-in">
                     <h4>Vision</h4>
                     <p>
                         Brailoo envisions a world where every fashion entrepreneur, regardless of background or
@@ -160,7 +166,7 @@
         <div class="inner">
             <h1>Meet the Team</h1>
             <div class="footer-card">
-                <div class="footer-card-inner">
+                <div class="footer-card-inner one animate-in">
                     <div class="card-top">
                         <h4>Adedeji</h4>
                     </div>
@@ -177,8 +183,8 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-card">
-                <div class="footer-card-inner two">
+            <div class="footer-card animate-in">
+                <div class="footer-card-inner two ">
                     <div class="card-top">
                         <h4>Hamda Koya</h4>
                     </div>
@@ -195,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-card">
+            <div class="footer-card animate-in">
                 <div class="footer-card-inner three">
                     <div class="card-top">
                         <h4>Daniel Abati</h4>
@@ -213,7 +219,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-card">
+            <div class="footer-card animate-in">
                 <div class="footer-card-inner four">
                     <div class="card-top">
                         <h4>Iddy Okon</h4>
@@ -231,7 +237,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-card">
+            <div class="footer-card animate-in">
                 <div class="footer-card-inner five">
                     <div class="card-top">
                         <h4>Sarah Iyere</h4>
@@ -249,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-card">
+            <div class="footer-card animate-in">
                 <div class="footer-card-inner six">
                     <div class="card-top">
                         <h4>Idris Ashiru</h4>
@@ -267,7 +273,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-card">
+            <div class="footer-card animate-in">
                 <div class="footer-card-inner seven">
                     <div class="card-top">
                         <h4>Felix Inala</h4>
@@ -289,10 +295,27 @@
     </section>
 </body>
 
-<script type="text/javascript">
-    if (screen.width >= 768) {
-        document.location = "index.html";
-    }
+<script>
+    // GSAP animation code
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select all elements with the class 'animate-in'
+    const elements = document.querySelectorAll('.animate-in');
+
+    // Loop through each element and set up ScrollTrigger
+    elements.forEach(element => {
+        gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 90%', // Adjust as needed
+                toggleActions: 'play none none reverse', // Play animation when 80% in view, reverse when out of view
+                // Add more options as needed
+            }
+        });
+    });
 </script>
 
 </html>

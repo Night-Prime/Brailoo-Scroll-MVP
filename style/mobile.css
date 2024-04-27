@@ -1,6 +1,8 @@
 /* Theme */
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+
 :root {
-    --fashion-1-hex: #000000;
+    --fashion-1-hex: #0c0c0c;
     --fashion-2-hex: #FFCB00;
     --fashion-3-hex: #FF6150;
     --fashion-4-hex: #F7F0E3;
@@ -39,8 +41,8 @@ body {
     scroll-behavior: smooth;
     grid: 0;
 
-    background-color: var(--fashion-1-hex);
-    color: var(--fashion-4-hex);
+    background-color: var(--fashion-4-hex);
+    color: var(--fashion-1-hex);
 }
 
 section {
@@ -68,6 +70,15 @@ a {
     cursor: pointer;
 }
 
+/* animations */
+
+.animate-in {
+    opacity: 0;
+    transform: translateY(25px);
+    /* Start position below */
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
 .inner {
     margin: 0 auto;
     inline-size: 90%;
@@ -81,6 +92,7 @@ a {
     top: 0;
 
     border-bottom: var(--border-size);
+    z-index: 999999;
 }
 
 nav {
@@ -114,12 +126,12 @@ header {
 }
 
 .hero-header h1 {
-    font-size: var(--h4);
-    font-weight: 500;
+    font-size: var(--mobile-h1);
+    font-weight: 600;
 }
 
 .hero-text {
-    font-size: var(--mobile-h3);
+    font-size: var(--mobile-h2);
     margin-block: 1rem;
 }
 
@@ -166,6 +178,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 2.5vw;
 }
 
 .bottom {
@@ -203,7 +216,7 @@ header {
 }
 
 .community {
-    background-color: var(--fashion-4-hex);
+    background-color: #f4e2c0;
 }
 
 .card-inner h4 {
@@ -227,6 +240,7 @@ header {
 .vision-inline h4 {
     margin: 0;
     font-size: var(--h6);
+    border-bottom: var(---border-size-light);
 }
 
 /* footer section */
@@ -239,6 +253,10 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.footer h1 {
+    border-bottom: var(---border-size-light);
 }
 
 .footer-card {
@@ -273,12 +291,16 @@ header {
     color: var(--fashion-1-hex);
 }
 
+.one {
+    background-color: #f4e2c0;
+}
+
 .two {
-    background-color: #ffef0c;
+    background-color: #edd09b;
 }
 
 .three {
-    background-color: #FFCB00;
+    background-color: #f0c36f;
 }
 
 .four {
