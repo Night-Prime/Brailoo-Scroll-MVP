@@ -124,6 +124,17 @@ a:hover {
     /* Change text color on hover */
 }
 
+.cta {
+    background-color: var(--fashion-3-hex) !important;
+    border-color: var(--fashion-3-hex);
+}
+
+.cta:hover {
+    background-color: var(--fashion-2-hex) !important;
+    /* color: var(--fashion-4-hex); */
+    font-weight: 600;
+}
+
 .links {
     /* inline-size: 600px; */
     display: flex;
@@ -137,6 +148,7 @@ a:hover {
     justify-content: flex-end;
 }
 
+/* hero section */
 
 .hero-content {
     /* margin-block-start: 5%; */
@@ -151,34 +163,37 @@ a:hover {
 }
 
 .grid-content {
+    position: relative;
+
     width: 85%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
     color: var(--fashion-4-hex);
 }
 
 .grid-item {
-    visibility: hidden;
-    opacity: 0;
-
-    /* padding-block: 1rem; */
-    position: relative;
-    height: (99vh / 3);
-}
-
-.first {
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
 }
 
 .grid-inner {
-    inline-size: 100%;
-    /* block-size: 0%; */
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    /* Center text horizontally */
 }
 
+.grid-inner h1 {
+    font-size: var(--h2);
+    font-weight: 500;
+    text-align: left;
+}
 
 .line {
     width: 100%;
@@ -189,17 +204,25 @@ a:hover {
 
 .red {
     position: absolute;
-    /* top: 60%; */
-    bottom: 0%;
-    right: -25%;
-    top: 5%;
-    block-size: 95% !important;
-    padding: 5%;
+    right: -15%;
+    inline-size: 55%;
+    block-size: 55%;
 
+    padding: 5%;
     background-image: url('../assets/svg/Vector\ \(2\).png');
     background-size: contain;
-
     background-repeat: no-repeat;
+    /* Center text horizontally */
+}
+
+.red p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.image-side {
+    block-size: 100%;
+    inline-size: 100%;
 }
 
 .grid-text {
@@ -208,18 +231,30 @@ a:hover {
     margin: 0;
     margin-block: 1vw;
     text-align: right;
+    /* Center text horizontally */
 }
 
+/* Second section*/
+
+.offer-section {
+    background-color: var(--fashion-1-hex) !important;
+    height: 60vh !important;
+}
+
+.offer-inline {
+    inline-size: 85%;
+    block-size: 100%;
+    margin: 0 auto;
+}
 
 .third {
-    grid-column: span 2;
-    block-size: 40vh;
+    margin: 0 auto;
+    block-size: 100%;
     display: flex;
-    align-items: center;
-    padding: 0 !important;
 }
 
 .files {
+    margin-block: 4rem;
     block-size: 90%;
     inline-size: 100%;
     display: flex;
@@ -229,6 +264,7 @@ a:hover {
 .file-top {
     flex: 1;
     font-size: var(--small);
+    color: var(--fashion-4-hex);
 }
 
 .file-top .icon {
@@ -395,7 +431,7 @@ a:hover {
     block-size: 100%;
 }
 
-.cta {
+.pill {
     border: var(---border-size-light);
     border-radius: var(--border-radius);
     display: flex;
@@ -487,7 +523,7 @@ a:hover {
 }
 
 .text-reveal-inner.animate-reveal span {
-    animation: reveal 0.5s forwards;
+    animation: reveal 0.3s forwards;
 }
 
 .team-inline .two {

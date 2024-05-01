@@ -15,8 +15,8 @@ window.addEventListener("load", () => {
   gsap.to(".main", {
     scrollTrigger: {
       trigger: ".navbar",
-      start: "700 10%",
-      end: "4400 20%",
+      start: "1100 10%",
+      end: "5400 20%",
       toggleClass: "navbar-bg",
       // markers: true,
       onEnter: () => {
