@@ -130,9 +130,7 @@ a:hover {
 }
 
 .cta:hover {
-    background-color: var(--fashion-2-hex) !important;
-    /* color: var(--fashion-4-hex); */
-    font-weight: 600;
+    background-color: var(--fashion-4-hex) !important;
 }
 
 .links {
@@ -254,8 +252,8 @@ a:hover {
 }
 
 .files {
-    margin-block: 4rem;
-    block-size: 90%;
+    margin-block: 2rem;
+    block-size: 100%;
     inline-size: 100%;
     display: flex;
     flex-direction: column;
@@ -263,7 +261,7 @@ a:hover {
 
 .file-top {
     flex: 1;
-    font-size: var(--small);
+    font-size: var(--h6);
     color: var(--fashion-4-hex);
 }
 
@@ -290,9 +288,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    block-size: 100%;
     inline-size: 80%;
     padding-inline: 5%;
+    height: fit-content;
+    margin-block: 4rem;
 }
 
 .file-inner h4 {
@@ -820,4 +819,52 @@ a:hover {
 
 .active a.action {
     display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-content {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+
+
+    .red {
+        block-size: 35%;
+    }
+}
+
+
+/* Resources page */
+.resources {
+    background-color: var(--fashion-1-hex);
+    color: var(--fashion-4-hex);
+}
+
+.resources-inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+    padding-block: 5vh;
+}
+
+.resources-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--fashion-4-hex)
+}
+
+.resources-header a {
+    height: fit-content;
+    background-color: var(--fashion-3-hex);
+    border-color: var(--fashion-3-hex);
+}
+
+.resources-header h1 {
+    font-size: var(--h2);
+    font-weight: 500;
+    text-align: left;
 }
