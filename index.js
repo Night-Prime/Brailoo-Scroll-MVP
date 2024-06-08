@@ -3,7 +3,6 @@ window.addEventListener("load", () => {
     window.location.href = "mobile.html";
     return; // Ensure no further code runs if redirected
   }
-
   gsap.registerPlugin(ScrollTrigger);
   const hero = document.querySelectorAll(".grid-item");
 

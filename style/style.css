@@ -127,6 +127,8 @@ a:hover {
 .cta {
     background-color: var(--fashion-3-hex) !important;
     border-color: var(--fashion-3-hex);
+    font-size: var(--p);
+    font-weight: 600;
 }
 
 .cta:hover {
@@ -240,7 +242,7 @@ a:hover {
 }
 
 .offer-inline {
-    inline-size: 85%;
+    inline-size: 90%;
     block-size: 100%;
     margin: 0 auto;
 }
@@ -273,11 +275,12 @@ a:hover {
     flex: 5;
     display: flex;
     flex-direction: row;
+    gap: 2%;
 }
 
 .file-bottom .file {
     width: calc(100%/3);
-    height: calc(80% + 10vh);
+    height: 100%;
 }
 
 .file-bottom .file:not(:first-child) {
@@ -285,24 +288,30 @@ a:hover {
 }
 
 .file-inner {
+    height: 210px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    inline-size: 80%;
+    gap: 5px;
+    justify-content: space-between;
+    padding-block: 15%;
     padding-inline: 5%;
-    height: fit-content;
-    margin-block: 4rem;
 }
 
 .file-inner h4 {
+    flex: 1;
     margin: 0;
     font-size: var(--h5);
     font-weight: 600;
 }
 
 .file-inner p {
+    flex: 1;
     font-size: var(--small);
     font-weight: 500;
+}
+
+.file-button {
+    flex: 1;
 }
 
 .icons {
@@ -368,11 +377,18 @@ a:hover {
 
 
 .mission .mission-inline {
-    inline-size: 100%;
-    block-size: 90%;
+    width: 100%;
+    height: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    /* gap: 20px; */
+    /* Adjust the gap between grid items */
     background-color: var(--fashion-4-hex);
+    /* padding: 20px; */
+    /* Add padding to the grid container */
+    box-sizing: border-box;
+    /* Ensure padding is included in element's total width and height */
 }
 
 .grid-mission>* {
@@ -389,10 +405,11 @@ a:hover {
     block-size: calc(100vh/2);
     border-block-end: var(---border-size-light);
     border-inline-end: var(---border-size-light);
+    box-sizing: border-box;
 }
 
 .grid-mission p {
-    font-size: var(--p);
+    font-size: 14px;
     margin: 0;
     margin-bottom: var(--p);
 
@@ -408,17 +425,17 @@ a:hover {
 }
 
 .wide h3 {
-    font-size: var(--h2);
+    font-size: var(--h3);
     font-weight: 500;
-    inline-size: 80%;
+    width: 80%;
     margin: 0;
     margin-bottom: var(--h6);
 }
 
 .wide p {
-    font-size: var(--p);
+    font-size: 14px;
     font-weight: 500;
-    inline-size: 80%;
+    width: 80%;
     text-align: justify;
     margin-bottom: var(--p);
 }
@@ -426,7 +443,7 @@ a:hover {
 .top img,
 .last img {
     object-fit: cover;
-    inline-size: 100%;
+    width: 100%;
     block-size: 100%;
 }
 
@@ -468,13 +485,14 @@ a:hover {
 .statemnt {
     border-top: var(---border-size-light);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     padding: 2%;
     position: relative;
 }
 
 .team-inline .one {
-    height: 40%;
+    height: 80%;
     background-color: var(--fashion-4-hex);
     color: var(--fashion-1-hex);
 }
@@ -518,7 +536,7 @@ a:hover {
     opacity: 0;
     position: relative;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .text-reveal-inner.animate-reveal span {
@@ -526,7 +544,7 @@ a:hover {
 }
 
 .team-inline .two {
-    height: calc(100%);
+    height: 80%;
     background-image: url(../assets/svg/eyes.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -659,7 +677,7 @@ a:hover {
 
 .grid-event h6 {
     position: absolute;
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin: 0;
     font-weight: 500;
     padding-inline-end: 5%;
@@ -819,6 +837,25 @@ a:hover {
 
 .active a.action {
     display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .grid-inner h1 {
+        font-size: var(--h4);
+    }
+
+    .red {
+        inline-size: 45%;
+        right: 0%;
+    }
+
+    .file-inner {
+        padding-block: 10%;
+    }
+
+    .grid-mission p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
