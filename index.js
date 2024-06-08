@@ -128,19 +128,20 @@ window.addEventListener("load", () => {
         });
     }
   };
+
+  window.addEventListener("resize", function () {
+    // onresize
+    checkWidth();
+    console.log("triggered!");
+    if (this.screen.width <= 475) {
+      this.document.location = "mobile.html";
+    }
+
+    // finish resize
+    clearTimeout(window.resizedFinished);
+    window.resizedFinished = setTimeout(checkWidth, 500);
+  });
+
   initMenu();
   gsap;
-});
-
-window.addEventListener("resize", function () {
-  // onresize
-  checkWidth();
-  console.log("triggered!");
-  if (this.screen.width <= 475) {
-    this.document.location = "mobile.html";
-  }
-
-  // finish resize
-  clearTimeout(window.resizedFinished);
-  window.resizedFinished = setTimeout(checkWidth, 500);
 });
