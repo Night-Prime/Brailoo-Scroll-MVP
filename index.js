@@ -1,7 +1,11 @@
 window.addEventListener("load", () => {
+  if (window.screen.width <= 475) {
+    window.location.href = "mobile.html";
+    return; // Ensure no further code runs if redirected
+  }
+
   gsap.registerPlugin(ScrollTrigger);
   const hero = document.querySelectorAll(".grid-item");
-
   // Initialise Hero
   const initMenu = () => {
     gsap.to(hero, {
@@ -123,19 +127,6 @@ window.addEventListener("load", () => {
         });
     }
   };
-
-  window.addEventListener("resize", function () {
-    // onresize
-    checkWidth();
-    console.log("triggered!");
-    if (this.screen.width <= 475) {
-      this.document.location = "mobile.html";
-    }
-
-    // finish resize
-    clearTimeout(window.resizedFinished);
-    window.resizedFinished = setTimeout(checkWidth, 500);
-  });
 
   initMenu();
   gsap;
