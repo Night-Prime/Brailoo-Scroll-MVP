@@ -408,6 +408,10 @@ a:hover {
     box-sizing: border-box;
 }
 
+.grid-mission h1 {
+    margin-block: 1rem;
+}
+
 .grid-mission p {
     font-size: 14px;
     margin: 0;
@@ -874,6 +878,7 @@ a:hover {
 
 /* Resources page */
 .resources {
+    overflow: scroll;
     background-color: var(--fashion-1-hex);
     color: var(--fashion-4-hex);
 }
@@ -881,8 +886,8 @@ a:hover {
 .resources-inner {
     margin: 0 auto;
     max-width: 1200px;
-    height: 100%;
-    padding-block: 5vh;
+    min-height: 100vh;
+    padding-block: 2vh;
     padding-inline: 2vw;
 }
 
@@ -907,6 +912,53 @@ a:hover {
     font-weight: 500;
     text-align: left;
 }
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+}
+
+.top-info {
+    text-align: justify;
+    margin-block: 2rem;
+}
+
+.top-info h3 {
+    font-size: var(--h5);
+    font-weight: 500;
+}
+
+.top-info p {
+    font-size: var(--h6);
+}
+
+.bottom-info {
+    display: inline-block;
+}
+
+.bottom-resources {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.resource {
+    padding-block: 1rem;
+    border-top: 2px solid var(--fashion-4-hex);
+}
+
+.resource h1 {
+    font-size: var(--h3);
+    font-weight: 500;
+    margin: 0;
+}
+
+.resource a {
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 475px) {
 
